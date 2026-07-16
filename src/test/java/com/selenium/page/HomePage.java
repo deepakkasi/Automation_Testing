@@ -1,19 +1,40 @@
 package com.selenium.page;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 
-public class HomePage {
+import com.selenium.base.BasePage;
+
+public class HomePage extends BasePage {
 	
-	private By userEmail=By.xpath("//input[@dataid=\"sh_email1\"]");
-	private By password=By.xpath("//input[@id=\"pass\"]");
-	private By company=By.xpath("(//input[@name=\"company\"])[1]");
-	private By submit_button=By.xpath("(//button[text()='Submit']");
-	private By downloadLink=By.xpath("//a[text()='DownLoad Link']");
-	private By userRole=By.xpath("//table[@id=\"resultTable\"]/tbody/tr/td/a[text()='Garry.White']/parent::td/following-sibling::td[1]");
-	private By training=By.id("#training");
-	private By alert=By.xpath("//button[text()=\"Click To Open Window Alert\"]");
-	private By prompt=By.xpath("//button[text()=\"Click To Open Window Prompt Alert\"]");
-	private By serach=By.xpath("//input[@id=\"dt-search-0\"]");
+	public HomePage(WebDriver webDriver) {
+		super(webDriver);
+	}
+	
+	private By register=By.xpath("//a[text()='Register']");
+	private By login=By.xpath("//a[text()='Log in']");
+	private By wishList=By.xpath("//a/span[text()='Wishlist']");
+	private By searchBar=By.xpath("//input[@id=\"small-searchterms\"]");
+	private By searchBtn=By.xpath("//button[text()='Search']");
+	private By currency=By.xpath("//select[@id=\"customerCurrency\"]");
+	private By shoppingCart=By.id("//a/span[text()='Shopping cart']");
+	private By computerMenu=By.xpath("//a[text()='Computers']");
+	private By electronicsMenu=By.xpath("//a[text()='Electronics']");
+	private By electronicCategory=By.xpath("//a/img[@title='Show products in category Electronics']");
+	
+	/*
+	 * public boolean fillDummyform() { try {
+	 * clearAndFill(userEmail,"abc@gmail.com"); clearAndFill(password,"pass");
+	 * click(submit_button);
+	 * 
+	 * return true; } catch(Exception ex) { System.out.println(ex); return false; }
+	 * }
+	 */
+	public boolean navigateToRegister() {
+		click(register);
+		return true;
+		
+	}
 	
 
 }
