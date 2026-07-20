@@ -11,7 +11,7 @@ public class LogInPage extends BasePage {
 		super(webDriver);
 	}
 	
-	private By register=By.xpath("//button[text()='Register']]");
+	private By register=By.xpath("//button[@title=\"Continue\"]");
 	
 	public boolean navigateToRegister() {
 		click(register);

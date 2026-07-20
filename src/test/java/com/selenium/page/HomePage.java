@@ -11,16 +11,16 @@ public class HomePage extends BasePage {
 		super(webDriver);
 	}
 	
-	private By register=By.xpath("//a[text()='Register']");
+	private By register=By.xpath("//a[text()='Login or register']");
 	private By login=By.xpath("//a[text()='Log in']");
 	private By wishList=By.xpath("//a/span[text()='Wishlist']");
-	private By searchBar=By.xpath("//input[@id=\"small-searchterms\"]");
-	private By searchBtn=By.xpath("//button[text()='Search']");
-	private By currency=By.xpath("//select[@id=\"customerCurrency\"]");
-	private By shoppingCart=By.id("//a/span[text()='Shopping cart']");
-	private By computerMenu=By.xpath("//a[text()='Computers']");
-	private By electronicsMenu=By.xpath("//a[text()='Electronics']");
-	private By electronicCategory=By.xpath("//a/img[@title='Show products in category Electronics']");
+	private By searchBar=By.xpath("//input[@name=\"filter_keyword\"]");
+	private By searchBtn=By.xpath("//div[@class=\"button-in-search\"]");
+	private By currency=By.xpath("//ul[@class=\"dropdown-menu currency\"]/preceding-sibling::a");
+	private By shoppingCart=By.id("(//span[text()=\"Cart\"]/parent::a)[1]");
+	private By accessories=By.xpath("//div[@class=\"subcategories\"]/preceding-sibling::a[contains(text(),\"Apparel & accessories\")]");
+	private By makeUp=By.xpath("//div[@class=\"subcategories\"]/preceding-sibling::a[contains(text(),\"Makeup\")]");
+	private By skinCare=By.xpath("//div[@class=\"subcategories\"]/preceding-sibling::a[contains(text(),\"Skincare\")]");
 	
 	/*
 	 * public boolean fillDummyform() { try {

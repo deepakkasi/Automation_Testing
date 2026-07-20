@@ -53,5 +53,21 @@ public class BasePage {
 		}
 		return true;
 	}
-
+	protected boolean selectDropdown(By SelectLocator,String value) {
+		try {
+			By optionLocator=By.xpath("//option[text()=\'"+value+"\'");
+			WebElement select=wait.until(
+					ExpectedConditions.elementToBeClickable(SelectLocator));
+			select.click();
+			WebElement option=wait.until(
+					ExpectedConditions.elementToBeClickable(optionLocator));
+			option.click();
+			
+		}
+		catch(Exception ex) {
+			System.out.println(ex);
+			return false;
+		}
+		return false;
+	}
 }

@@ -18,7 +18,7 @@ public class MainTest extends BaseTest{
 		RegisterPage register=new RegisterPage(driver);
 		boolean reg=register.registerUser();
 		Assert.assertEquals(reg, true);
-		Assert.assertEquals("https://demo.nopcommerce.com/registerresult/1?returnUrl=/", driver.getCurrentUrl());
+		Assert.assertEquals(driver.getCurrentUrl(),"https://automationteststore.com/index.php?rt=account/success");
 		
 		//https://demo.nopcommerce.com/registerresult/1?returnUrl=/
 	}

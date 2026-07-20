@@ -12,11 +12,12 @@ public class BaseTest {
 	@BeforeMethod
 	public void beforeMethod() {
 		driver =new ChromeDriver();
-		 driver.get("https://demo.nopcommerce.com/");
+		 driver.get("https://automationteststore.com/");
 	}
+	/*
 	@AfterClass
 	public void tearDown() {
 		driver.quit();
 	}
-
+*/
 }

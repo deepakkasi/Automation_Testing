@@ -6,7 +6,6 @@
       <class name="com.selenium.test.MainTest">
         <methods>
           <include name="beforeMethod"/>
-          <include name="tearDown"/>
           <include name="fillDummyForm"/>
         </methods>
       </class> <!-- com.selenium.test.MainTest -->
